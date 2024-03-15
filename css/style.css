@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap");
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   color: #0c0c0c;
   background-color: #ffffff;
   overflow-x: hidden;
@@ -162,7 +162,7 @@ a:focus {
   padding: 5px 20px;
   color: #314695;
   text-align: center;
-  text-transform: uppercase;
+  font-size: 1.15rem;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -444,7 +444,6 @@ a:focus {
 
 .service_section .box .detail-box h5 {
   font-weight: bold;
-  text-transform: uppercase;
   color: #314695;
 }
 
@@ -521,6 +520,31 @@ a:focus {
   border: none;
   margin-top: 15px;
   border-radius: 10px;
+}
+
+#aboutbutton {
+  display: flex;
+  padding: 10px 45px;
+  background-color: #48d8f7;
+  color: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 2%;
+  border-radius: 10px;
+  text-align: center;
+  width: 180px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -4%;
+}
+
+#aboutbutton:hover {
+  background-color: #314695;
+  color: white;
+  transition: 1s;
 }
 
 .about_section .detail-box a:hover {
@@ -868,7 +892,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   color: #314695;
 }
 

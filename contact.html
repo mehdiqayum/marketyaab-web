@@ -11,27 +11,23 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png.png" type="">
+  <link rel="shortcut icon" href="images/Marketyaab_Blue.svg" type="">
 
-  <title> Marketyaab Home </title>
+  <title> Contact us | Marketyaab </title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <!--owl slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -41,7 +37,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
             <span>
-              <img src="images/logo-nobg.png" alt="Marketyaab logo" style="width: 190px; height: 40x; margin-top: -10px; box-sizing: border-box;"> 
+              <img src="images/Marketyaab_Logo.svg" alt="Marketyaab logo" style="width: 190px; height: 40x; margin-top: -10px; box-sizing: border-box; margin-left: -10px;"> 
             </span>
           </a>
 
@@ -78,7 +74,7 @@
 
 <div class="formbold-main-wrapper">
     <div class="formbold-form-wrapper">
-      <form action="send_email.php" method="post">
+      <form action="/send_email" method="post">
           <div class="formbold-input-flex">
             <div>
                 <input
@@ -128,7 +124,7 @@
                 <label for="phone" class="formbold-form-label"> Phone </label>
             </div>
           </div>
-            <select style="border: none; border-bottom: 1.5px solid #314695; width: 100%; color: #314695; font-weight: 450;">
+            <select name="service" style="border: none; border-bottom: 1.5px solid #314695; width: 100%; color: #314695; font-weight: 450;">
               <option value="" style="color: #314695;" selected disabled>Select a Service</option>
               <option value="" style="color: #314695;">Digital Marketing</option>
               <option value="" style="color: #314695;">Search Engine Optimization</option>
@@ -195,16 +191,35 @@
                 </defs>
                 </svg>
                 Attach files
-                <input type="file" name="upload" id="upload">
+                <input type="file" name="upload" id="upload" multiple>
             </label>
           </div>
-  
+          <div id="filePreview"></div>
           <button class="formbold-btn" id="sendmessage">
               Send Message
           </button>
       </form>
     </div>
   </div>
+  <script>
+    // JavaScript code to handle file input change
+    document.getElementById('upload').addEventListener('change', function(event) {
+      const fileList = event.target.files;
+      const filePreviewDiv = document.getElementById('filePreview');
+  
+      // Clear previous file previews
+      filePreviewDiv.innerHTML = '';
+  
+      // Loop through the files and display their names
+      for (let i = 0; i < fileList.length; i++) {
+        const file = fileList[i];
+        const fileName = document.createElement('p');
+        fileName.textContent = file.name;
+        filePreviewDiv.appendChild(fileName);
+      }
+    });
+  </script>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     * {
@@ -213,7 +228,7 @@
       box-sizing: border-box;
     }
     body {
-      font-family: "Inter", sans-serif;
+      font-family: "Plus Jakarta Sans", sans-serif;
       background-color: white;
     }
     .formbold-main-wrapper {
@@ -329,9 +344,9 @@
   
   </style>
 
-  <!-- info section -->
+   <!-- info section -->
 
-  <section class="info_section layout_padding2">
+   <section class="info_section layout_padding2">
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-lg-3 info_col">
