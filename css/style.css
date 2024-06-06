@@ -951,3 +951,58 @@ a:focus {
   color: #314695;
 }
 /*# sourceMappingURL=style.css.map */
+/* Existing styles for the button */
+#blog1button {
+  display: flex;
+  padding: 10px 0;
+  background-color: #48d8f7;
+  color: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 2%;
+  border-radius: 10px;
+  text-align: center;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -4%;
+}
+
+#blog1button:hover {
+  background-color: #314695;
+  color: white;
+  transition: 1s;
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  #blog1button {
+      display: block;
+      font-size: 1em !important;
+      text-align: center;
+      padding: 10px 0;
+      margin: 20px 0;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      width: 100%;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  #blog1button {
+      display: block;
+      font-size: 0.9em !important;
+      text-align: center;
+      padding: 10px 0;
+      margin: 20px 0;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      width: 100%;
+  }
+}
